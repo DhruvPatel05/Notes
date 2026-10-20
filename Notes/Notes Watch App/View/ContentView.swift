@@ -21,15 +21,25 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+            HStack(alignment: .center, spacing: 6) {
+                TextField("Add New Note",text:$text)
+                Button {
+                    
+                } label: {
+                    Image(systemName: "plus")
+                }
+            } // : HSTACK
+           
+        } // : VSTACK
+        .navigationTitle("Note")
     }
 }
 
-#Preview {
-    ContentView()
+// MARK: - PREVIEW
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
+
