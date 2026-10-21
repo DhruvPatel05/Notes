@@ -26,14 +26,15 @@ struct ContentView: View {
                 Button {
                     
                 } label: {
-                    Image(systemName: "plus")
+                    Image(systemName: "plus.circle")
+                        .font(.system(size: 42,weight: .semibold))
                 }
                 .fixedSize()
                 .buttonStyle(PlainButtonStyle())
                 .foregroundColor(.accentColor)
 //                .buttonStyle(BorderedButtonStyle(tint:.accentColor))
             } // : HSTACK
-           
+            Spacer()
         } // : VSTACK
         .navigationTitle("Note")
     }
