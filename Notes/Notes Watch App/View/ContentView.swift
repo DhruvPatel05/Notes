@@ -28,6 +28,10 @@ struct ContentView: View {
                 } label: {
                     Image(systemName: "plus")
                 }
+                .fixedSize()
+                .buttonStyle(PlainButtonStyle())
+                .foregroundColor(.accentColor)
+//                .buttonStyle(BorderedButtonStyle(tint:.accentColor))
             } // : HSTACK
            
         } // : VSTACK
