@@ -15,8 +15,18 @@ struct ContentView: View {
     @State private var text: String = ""
     
     // MARK: - FUNCTION
+    
+    func getDocumentDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
+    }
     func save() {
-        dump(notes)
+       // dump(notes)
+        do {
+            
+        } catch {
+            print("Saving data has failed")
+        }
     }
     // MARK: - BODY
     
