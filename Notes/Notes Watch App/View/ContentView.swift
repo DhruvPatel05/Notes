@@ -23,13 +23,17 @@ struct ContentView: View {
     func save() {
        // dump(notes)
         do {
-            
+            // 1. Convert the notes array to data using the getDocumentDirectory
+            let data = try JSONEncoder().encode(notes)
+            // 2. Create a New Url to save the file using the getDocumentDirectory
+            let url = getDocumentDirectory().appendingPathComponent("notes")
+            // 3. Write the data to the given URL
+            try data.write(to: url)
         } catch {
             print("Saving data has failed")
         }
     }
     // MARK: - BODY
-    
     
     var body: some View {
         VStack {
