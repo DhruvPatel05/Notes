@@ -42,7 +42,7 @@ struct ContentView: View {
             let data = try Data(contentsOf: url)
             
             // 3. decode the data
-            
+            notes = try JSONDecoder().decode([Note].self, from: data)
         }
         catch {
             // Do Nothing
