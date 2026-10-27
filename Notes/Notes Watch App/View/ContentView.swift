@@ -78,6 +78,14 @@ struct ContentView: View {
 //                .buttonStyle(BorderedButtonStyle(tint:.accentColor))
             } // : HSTACK
             Spacer()
+            List {
+                ForEach(0..<notes.count,id:\.self) { i in
+                    HStack {
+                        
+                    } //: HSTACK
+                    
+                }
+            }
             
             Text("\(notes.count)")
         } // : VSTACK
