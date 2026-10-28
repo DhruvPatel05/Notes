@@ -50,6 +50,13 @@ struct ContentView: View {
             }
         }
     }
+    
+    func delete(offsets: IndexSet) {
+        withAnimation {
+            notes.remove(atOffsets: offsets)
+            save()
+        }
+    }
     // MARK: - BODY
     
     var body: some View {
