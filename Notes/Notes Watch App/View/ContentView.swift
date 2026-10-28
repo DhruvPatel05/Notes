@@ -96,7 +96,8 @@ struct ContentView: View {
                             .padding(.leading,5)
                     } //: HSTACK
                     
-                }
+                } // : LOOP
+                .onDelete(perform: delete)
             }
             
             Text("\(notes.count)")
