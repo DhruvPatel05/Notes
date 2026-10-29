@@ -85,21 +85,27 @@ struct ContentView: View {
 //                .buttonStyle(BorderedButtonStyle(tint:.accentColor))
             } // : HSTACK
             Spacer()
-            List {
-                ForEach(0..<notes.count,id:\.self) { i in
-                    HStack {
-                      Capsule()
-                            .frame(width: 4)
-                            .foregroundColor(.accentColor)
-                        Text(notes[i].text)
-                            .lineLimit(1)
-                            .padding(.leading,5)
-                    } //: HSTACK
-                    
-                } // : LOOP
-                .onDelete(perform: delete)
+            if notes.count >= 1 {
+                List {
+                    ForEach(0..<notes.count,id:\.self) { i in
+                        HStack {
+                            Capsule()
+                                .frame(width: 4)
+                                .foregroundColor(.accentColor)
+                            Text(notes[i].text)
+                                .lineLimit(1)
+                                .padding(.leading,5)
+                        } //: HSTACK
+                        
+                    } // : LOOP
+                    .onDelete(perform: delete)
+                }
             }
-            
+            else {
+                Spacer()
+                Image.init(systemName: "note.text")
+                Spacer()
+            } //: LIST
             Text("\(notes.count)")
         } // : VSTACK
         .navigationTitle("Note")
