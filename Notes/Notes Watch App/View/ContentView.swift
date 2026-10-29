@@ -104,6 +104,11 @@ struct ContentView: View {
             else {
                 Spacer()
                 Image.init(systemName: "note.text")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.gray)
+                    .opacity(0.25)
+                    .padding(25)
                 Spacer()
             } //: LIST
             Text("\(notes.count)")
