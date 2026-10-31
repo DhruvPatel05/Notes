@@ -21,8 +21,9 @@ struct DetailView: View {
 
 // MARK: - PREVIEW
 struct DetailView_Previews: PreviewProvider {
+    static var sampleData: Note = Note(id: UUID(), text: "Hello World")
     static var previews: some View {
-        DetailView()
+        DetailView(note: sampleData, count: 0, index: 1)
     }
 }
 
