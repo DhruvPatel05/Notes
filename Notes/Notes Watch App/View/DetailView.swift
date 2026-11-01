@@ -15,7 +15,17 @@ struct DetailView: View {
     let index: Int
     // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center, spacing: 3) {
+            // HEADER
+            HStack {
+                Capsule()
+                    .frame(height: 1)
+                Image(systemName: "note.text")
+            }
+            // CONTENT
+            // FOOTER
+            // VSTACK
+        }
     }
 }
 
