@@ -21,8 +21,24 @@ struct DetailView: View {
                 Capsule()
                     .frame(height: 1)
                 Image(systemName: "note.text")
-            }
+                
+                Capsule()
+                    .frame(height: 1)
+            } //: HSTACK
+            .foregroundColor(.accentColor)
+            
             // CONTENT
+            Spacer()
+            
+            ScrollView(.vertical) {
+                Text(note.text)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+            }
+             
+            Spacer()
+
             // FOOTER
             // VSTACK
         }
