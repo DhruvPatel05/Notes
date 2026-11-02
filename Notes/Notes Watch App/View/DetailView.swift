@@ -38,10 +38,14 @@ struct DetailView: View {
             }
              
             Spacer()
-
             // FOOTER
             HStack(alignment: .center) {
+                Image(systemName: "gear")
+                    .imageScale(.large)
+            Spacer()
                 
+            Text("\(count)/ \(index + 1)")
+
             }// : HSTACK
             .foregroundColor(.secondary)
            
