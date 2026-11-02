@@ -40,8 +40,13 @@ struct DetailView: View {
             Spacer()
 
             // FOOTER
-            // VSTACK
-        }
+            HStack(alignment: .center) {
+                
+            }// : HSTACK
+            .foregroundColor(.secondary)
+           
+        } // VSTACK
+        .padding(3)
     }
 }
 
