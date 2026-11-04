@@ -45,6 +45,9 @@ struct DetailView: View {
             Spacer()
                 
             Text("\(count)/ \(index + 1)")
+            Spacer()
+                Image(systemName: "info.circle")
+                    .imageScale(.large)
 
             }// : HSTACK
             .foregroundColor(.secondary)
