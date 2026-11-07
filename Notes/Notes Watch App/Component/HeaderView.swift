@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct HeaderView: View {
+    // MARK: - PROPERTY
+    
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Capsule()
+                .frame(height: 1)
+            Image(systemName: "note.text")
+            Capsule()
+                .frame(height: 1)
+        } //: HSTACK
+        .foregroundColor(.accentColor)
     }
 }
 
