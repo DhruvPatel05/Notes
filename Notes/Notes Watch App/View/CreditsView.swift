@@ -18,6 +18,7 @@ struct CreditsView: View {
             // PROFILE IMAGE
             // HEADER
             // CONTENT
+            Spacer()
             
         } //: VSTACK
     }
