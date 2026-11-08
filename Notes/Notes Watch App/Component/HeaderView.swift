@@ -10,17 +10,26 @@ import SwiftUI
 struct HeaderView: View {
     // MARK: - PROPERTY
     
+    var title: String = ""
     
-    // MARK: - Body
+    // MARK: - BODY
     var body: some View {
-        HStack {
-            Capsule()
-                .frame(height: 1)
-            Image(systemName: "note.text")
-            Capsule()
-                .frame(height: 1)
-        } //: HSTACK
-        .foregroundColor(.accentColor)
+        VStack {
+            // TITLE
+            if title != "" {
+                
+            }
+            
+            // SEPARATOR
+            HStack {
+                Capsule()
+                    .frame(height: 1)
+                Image(systemName: "note.text")
+                Capsule()
+                    .frame(height: 1)
+            } //: HSTACK
+            .foregroundColor(.accentColor)
+        } //: VSTACK
     }
 }
 
