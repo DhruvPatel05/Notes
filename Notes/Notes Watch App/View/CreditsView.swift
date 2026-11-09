@@ -17,8 +17,16 @@ struct CreditsView: View {
         VStack(spacing:3) {
             // PROFILE IMAGE
             // HEADER
+            HeaderView(title:"Credits")
+            
             // CONTENT
-            Spacer()
+            Text("Robert Petras")
+                .foregroundColor(.primary)
+                .fontWeight(.bold)
+            Text("Developer")
+                .font(.footnote)
+                .foregroundColor(.secondary)
+                .fontWeight(.light)
             
         } //: VSTACK
     }
