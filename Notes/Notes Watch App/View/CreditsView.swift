@@ -19,7 +19,7 @@ struct CreditsView: View {
     var body: some View {
         VStack(spacing:3) {
             // PROFILE IMAGE
-            Image("developer-no1")
+            Image(randomImage)
                 .resizable()
                 .scaledToFit()
                 .layoutPriority(1)
