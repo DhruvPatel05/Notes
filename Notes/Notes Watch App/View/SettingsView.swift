@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - PROPERTY
+    
+    @AppStorage("lineCount") var lineCount: Int = 1
+    
+    // MARK: - BODY
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing:8) {
+            // HEADER
+            HeaderView(title: "Settings")
+            // ACTUAL LINE COAST
+            
+            // SLIDER
+            
+        } //: VSTACK
     }
 }
 
-#Preview {
-    SettingsView()
+// MARK: - PREVIEW
+struct SettingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsView()
+
+    }
 }
+
